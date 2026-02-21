@@ -61,7 +61,6 @@ print(answer)
 
 - `rag_agent/` — retrieval (BM25 + embeddings), გენერაცია (Gemini, OpenAI-თან შესათავსებელი API-ით), ingest, კონფიგის ჩატვირთვა.
 - `main.py` — CLI შესასვლელი.
+- `demo.py` — ვებ-დემო (Streamlit).
 - `data/` — წყაროს დოკუმენტები(manually ჩამატებული).
 - `index/` — ingest-ის შედეგი (`chunks.json`, `embeddings.npy`). `data/`-ში ფაილების დამატების ან შეცვლის შემდეგ თავიდან გაშვება: `python -m rag_agent.ingest`.
-
-

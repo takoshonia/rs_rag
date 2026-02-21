@@ -1,6 +1,4 @@
 # RAG_RS
 .env
 .venv/
-index/chunks.json
-index/embeddings.npy
 __pycache__/
