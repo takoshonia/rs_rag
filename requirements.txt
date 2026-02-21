@@ -1,0 +1,19 @@
+# RAG Agent — Infohub.rs.ge
+# Python 3.10+
+
+# LLM
+openai>=1.0.0
+
+# Embeddings & vector store (local index)
+sentence-transformers>=2.2.0
+rank_bm25>=0.2.2
+numpy>=1.24.0
+
+# Text processing
+python-dotenv>=1.0.0
+
+# PDF ingestion
+pypdf>=3.0.0
+
+# Config
+pyyaml>=6.0
