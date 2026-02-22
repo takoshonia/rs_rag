@@ -1,0 +1,4 @@
+# RAG_RS
+.env
+.venv/
+__pycache__/
