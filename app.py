@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
-Entry point for Hugging Face Spaces (Streamlit). Same as demo.py.
-Run locally: streamlit run demo.py  or  streamlit run app.py
+Streamlit ვებ-ინტერფეისი. ლოკალურად: streamlit run app.py
 """
 
 import sys
@@ -37,20 +36,14 @@ def main():
     st.markdown("---")
 
     st.subheader("შემოთავაზებული კითხვები")
-    st.caption("პასუხს პროგრამა მოძიებულ დოკუმენტებში ძიებს. დააწკაპუნეთ კითხვაზე, რომ ველი შეივსოს:")
-    if "question_input" not in st.session_state:
-        st.session_state["question_input"] = ""
-    cols = st.columns(2)
-    for i, q in enumerate(SUGGESTED_QUESTIONS):
-        with cols[i % 2]:
-            if st.button(q, key=f"sq_{i}", use_container_width=True):
-                st.session_state["question_input"] = q
-                st.rerun()
+    st.caption("პასუხს პროგრამა მოძიებულ დოკუმენტებში ძიებს. შეგიძლიათ ქვემოთ ჩამოთვლილი კითხვები დააკოპიროთ და ჩასვათ ველში:")
+    questions_text = "\n".join(SUGGESTED_QUESTIONS)
+    st.code(questions_text, language=None)
     st.markdown("---")
 
     question = st.text_area(
         "კითხვა ქართულად",
-        placeholder="ჩაწერეთ კითხვა ან აირჩიეთ ზემოთ.",
+        placeholder="ჩაწერეთ ან ჩაიკოპირეთ ზემოთან კითხვა.",
         height=100,
         key="question_input",
     )
