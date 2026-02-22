@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
-Entry point for Hugging Face Spaces (Streamlit). Same as demo.py.
-Run locally: streamlit run demo.py  or  streamlit run app.py
+Streamlit ვებ-ინტერფეისი. ლოკალურად: streamlit run app.py
 """
 
 import sys
