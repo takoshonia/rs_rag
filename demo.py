@@ -47,8 +47,10 @@ def main():
                 st.rerun()
     st.markdown("---")
 
+    _default = st.session_state.get("question_input", "")
     question = st.text_area(
         "კითხვა ქართულად",
+        value=_default,
         placeholder="ჩაწერეთ კითხვა ან აირჩიეთ ზემოთ.",
         height=100,
         key="question_input",
